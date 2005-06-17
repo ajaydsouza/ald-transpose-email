@@ -7,7 +7,7 @@ Keeps your email safe from spammers when you want to use mailto: links.
 
 == Installation ==
 
-1. Upload to your plugins folder, usually `wp-content/plugins/`
+1. Upload ald-transpose-email.php to your plugins folder, usually `wp-content/plugins/`
 2. Activate the plugin on the plugin screen
 3. Add <a href="javascript:Transpose_Email('user','domain.com','About your site') ">Email Me</a>. Change user and domain.com to match your email address.
 
