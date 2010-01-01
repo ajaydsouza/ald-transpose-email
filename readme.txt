@@ -3,8 +3,8 @@ Tags: Transpose Email, email, contact, javascript
 Contributors: Ajay
 Donate link: http://ajaydsouza.com/donate/
 Stable tag: trunk
-Requires at least: 1.5
-Tested up to: 2.8
+Requires at least: 2.5
+Tested up to: 2.9.1
 
 Keeps your email safe from spammers when you want to use mailto: links.
 
@@ -20,10 +20,13 @@ You have the option to set the default subject line to whatever you want.
 
 1. Unzip ald-transpose-email.zip as is into your plugins folder, usually `wp-content/plugins/`
 2. Activate the plugin on the plugin screen
-3. Add <a href="javascript:Transpose_Email('user','domain.com','About your site') ">Email Me</a>. Change user and domain.com to match your email address.
+3. Add <a href="javascript:Transpose_Email('someone','example.com','About your site') ">Email Me</a>. Change someone and example.com to match your email address
 
 
 == Changelog ==
+
+= 1.3 =
+* Better support for blogs which have the `wp-content` folder moved from the original folder
 
 = 1.2.1 =
 * Uploaded in the WordPress repository.
@@ -41,14 +44,14 @@ You have the option to set the default subject line to whatever you want.
 
 = What are the requirements for this plugin? =
 
-1. WordPress 1.5 or above 
+1. WordPress 2.5 or above 
 2. The user's browser needs to have JavaScript enabled
 
 = Can I customize what is displayed? =
 
 Yes, you can. The javascript function accepts the following arguments:
-1. userid - The part that comes before the @ in your email address e.g. my email address is me@ajaydsouza.com, so I enter it as me
-2. domain - The part that comes after the @ in your email address e.g. my email address is me@ajaydsouza.com, so I enter it as ajaydsouza.com
+1. userid - The part that comes before the @ in your email address e.g. if your email is *someone@example.com*, enter it as *someone*
+2. domain - The part that comes after the @ in your email address e.g. if your email is *someone@example.com*, enter it as *example.com*
 3. subject - The subject line of the email you will receive. 
 
 For more information, please visit http://ajaydsouza.com/wordpress/plugins/transpose-email-plugin/#customizing

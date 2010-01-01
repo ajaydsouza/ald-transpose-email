@@ -13,14 +13,17 @@
 			Start++
 		}
 		Start = WhereHash;
-		Start ++
+		Start ++;
 		WhereHash +=2;
 		for (Count = WhereHash; Count <=email.length; Count++)
 		{
-			TempAfter +=email.substring (Start, Count)
-			Start++
+			TempAfter +=email.substring (Start, Count);
+			Start++;
 		}
 		NewString = TempAfter +'@' + TempBefore;
-		parent.location = 'mailto:'+NewString+'?subject='+subject;
+		parent.location = 'mailto:'+NewString
+		if (subject != null) {
+		  parent.location = parent.location+'?subject='+subject;
+		}
 	}
 

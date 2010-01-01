@@ -1,31 +1,30 @@
 <?php
-
 /*
-
 Plugin Name: Transpose Email
-Version: 1.2.1
-Plugin URI: http://www.ajaydsouza.com/wordpress/plugins/transpose-email-plugin/
+Version: 1.3
+Plugin URI: http://ajaydsouza.com/wordpress/plugins/transpose-email-plugin/
 Description: Keeps your email safe from spammers when you want to use mailto: links.
 Author: Ajay D'Souza 
-Author URI: http://www.ajaydsouza.com/
-
+Author URI: http://ajaydsouza.com/
 */
 
-//define function to spit out include in head
+if (!defined('ABSPATH')) die("Aren't you supposed to come here via WP-Admin?");
 
-if (!function_exists('get_settings')) {
-	$ald_blog_url = $_SERVER['SCRIPT_URI'];
-	$ald_blog_url = preg_replace("/wp-content\\/plugins\\/ald-transpose-email\\.php$/", "", $ald_blog_url);
-} else {
-	$ald_blog_url = get_settings('siteurl');
-}
+// Pre-2.6 compatibility
+if ( !defined('WP_CONTENT_URL') )
+	define( 'WP_CONTENT_URL', get_option('siteurl') . '/wp-content');
+if ( !defined('WP_CONTENT_DIR') )
+	define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
+// Guess the location
+$transpose_path = WP_CONTENT_DIR.'/plugins/'.plugin_basename(dirname(__FILE__));
+$transpose_url = WP_CONTENT_URL.'/plugins/'.plugin_basename(dirname(__FILE__));
 
 function ald_transpose_email()
 {
-	global $ald_blog_url;
+	global $transpose_url;
 ?>
 
-<script type="text/javascript" src="<?php echo $ald_blog_url?>/wp-content/plugins/ald-transpose-email/ald-transpose-email.js"></script>
+<script type="text/javascript" src="<?php echo $transpose_url?>/ald-transpose-email.js"></script>
 
 <?php
 }
