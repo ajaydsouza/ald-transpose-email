@@ -16,11 +16,20 @@ Transpose Email plugin allows you to use JavaScript to create an encoded link. C
 
 You have the option to set the default subject line to whatever you want.
 
+= Features =
+
+* Easy to use and edit.
+* Doesn't require any external program to encrypt your email.
+* Function can be called muliple times on the same page, just by passing different email addresses.
+* Uses the user's default email program like Outlook Express to send the email. So, will work even your host has disabled the mail() function of php as well as SMTP.
+* Doesn't require reencrypting of your email address in case it changes. All you need to do is update the arguments to the function.
+
+
 == Installation ==
 
 1. Unzip ald-transpose-email.zip as is into your plugins folder, usually `wp-content/plugins/`
 2. Activate the plugin on the plugin screen
-3. Add <a href="javascript:Transpose_Email('someone','example.com','About your site') ">Email Me</a>. Change someone and example.com to match your email address
+3. Add `<a href="javascript:Transpose_Email('someone','example.com','About your site') ">Email Me</a>`. Change someone and example.com to match your email address
 
 
 == Changelog ==
