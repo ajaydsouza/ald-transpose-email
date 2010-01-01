@@ -36,6 +36,7 @@ You have the option to set the default subject line to whatever you want.
 
 = 1.3 =
 * Better support for blogs which have the `wp-content` folder moved from the original folder
+* Added support for blank subject line
 
 = 1.2.1 =
 * Uploaded in the WordPress repository.
