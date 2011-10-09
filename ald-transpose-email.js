@@ -21,7 +21,7 @@
 			Start++;
 		}
 		NewString = TempAfter +'@' + TempBefore;
-		parent.location = 'mailto:'+NewString
+		parent.location = 'mailto:'+NewString;
 		if (subject != null) {
 		  parent.location = parent.location+'?subject='+subject;
 		}

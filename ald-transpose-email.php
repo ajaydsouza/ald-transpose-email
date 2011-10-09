@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Transpose Email
-Version: 1.3
+Version: 1.3.1
 Plugin URI: http://ajaydsouza.com/wordpress/plugins/transpose-email-plugin/
 Description: Keeps your email safe from spammers when you want to use mailto: links.
 Author: Ajay D'Souza 
